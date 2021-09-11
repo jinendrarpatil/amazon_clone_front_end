@@ -1,9 +1,10 @@
 import React from "react";
+import NavbarContainer from "./components/layout/Navbar/NavbarContainer";
 
 function App() {
   return (
     <div>
-      <h1>Hekki wiki</h1>
+      <NavbarContainer />
     </div>
   );
 }
