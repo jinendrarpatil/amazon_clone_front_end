@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "sidebar_title": "नमस्कार, साइन इन करें",
+    "sidebar_help_title0": "सहायता और सेटिंग",
+    "btn_account_title": "आपका खाता",
+    "btn_signin_title": "साइन इन करें",
+    "menu_signin_btn_title": "साइन इन करें",
+    "menu_signin_sub_title": "नए ग्राहक",
+    "menu_signin_register_text": "यहाँ से प्रारंभ करें"
+  }
+}

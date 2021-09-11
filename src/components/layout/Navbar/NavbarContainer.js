@@ -11,7 +11,7 @@ class NavbarContainer extends Component {
   render() {
     return (
       <div>
-        <NavbarView name="amazon" />
+        <NavbarView {...this.props} />
       </div>
     );
   }
