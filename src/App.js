@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import LandingPage from "./components/layout/LandingPage";
 import { useTranslation } from "react-i18next";
 import NavbarContainer from "./components/layout/Navbar/NavbarContainer";
@@ -7,12 +8,14 @@ import LoginContainer from "./components/Login/LoginContainer";
 
 function App() {
   return (
-    <div>
-      <NavbarContainer />
-      <LoginContainer />
-      {/* <LandingPage t={t} i18n={i18n} /> */}
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div>
+        <NavbarContainer path="" />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/login" component={LoginContainer} />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

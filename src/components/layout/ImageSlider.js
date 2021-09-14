@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ImageSlider() {
   return (
@@ -11,54 +12,54 @@ function ImageSlider() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <a href="https://www.google.com">
+            <Link to="/">
               <img
                 src="assets/img/slider/slide01.png"
                 className="d-block w-100"
                 height="500"
                 alt="slide 01"
               />
-            </a>
+            </Link>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <Link to="/">
               <img
                 src="assets/img/slider/slide02.png"
                 className="d-block w-100"
                 height="500"
                 alt="slide 02"
               />
-            </a>
+            </Link>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <Link to="/">
               <img
                 src="assets/img/slider/slide03.png"
                 className="d-block w-100"
                 height="500"
                 alt="slide 03"
               />
-            </a>
+            </Link>
           </div>
           <div className="carousel-item ">
-            <a href="https://www.google.com">
+            <Link to="/">
               <img
                 src="assets/img/slider/slide04.png"
                 className="d-block w-100"
                 height="500"
                 alt="slide 04"
               />
-            </a>
+            </Link>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <Link to="/">
               <img
                 src="assets/img/slider/slide05.png"
                 className="d-block w-100"
                 height="500"
                 alt="slide  05"
               />
-            </a>
+            </Link>
           </div>
         </div>
         <a

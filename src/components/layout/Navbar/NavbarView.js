@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavbarView(props) {
   return (
@@ -40,9 +41,9 @@ function NavbarView(props) {
               >
                 You Account
               </a>
-              <a href="login.html" className="btn btn-warning my-2  btn-sm">
+              <Link to="/login" className="btn btn-warning my-2  btn-sm">
                 Sign in
-              </a>
+              </Link>
             </div>
             <div className="drawer-footer">
               <button
@@ -58,14 +59,14 @@ function NavbarView(props) {
         </div>
         {/* <!-- Drawer Ends --> */}
 
-        <a className="navbar-brand pl-2" href="navbar.html">
+        <Link className="navbar-brand pl-2" to="/">
           <img
             src="assets/img/amazon_logo_white.png"
             height="30"
             width="100"
             alt="amazon logo white"
           />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -260,12 +261,12 @@ function NavbarView(props) {
               </a>
               <div className="dropdown-menu px-3" aria-labelledby="userAccount">
                 <div className="d-flex flex-column justify-content-center">
-                  <a
-                    href="login.html"
+                  <Link
+                    to="/login"
                     className="btn btn-warning w-75 btn-sm font-weight-bold"
                   >
                     Signin
-                  </a>
+                  </Link>
                   <small>
                     New customer?<a href="register.html"> Start here.</a>
                   </small>
