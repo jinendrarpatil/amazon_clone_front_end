@@ -1,35 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-function LoginView(props) {
+function RegisterView(props) {
   return (
     <>
-      {/* Login Form Card Starts */}
+      {/* <!-- Register Form Card Starts --> */}
       <div className="container mb-5">
         <div
           className="card mx-auto mt-5 pb-3 shadow rounded"
           style={{ width: "25rem" }}
         >
           <div className="card-body">
-            <h4 className="card-title">Login</h4>
-            {/* Login Form Start  */}
+            <h4 className="card-title">Register</h4>
+            {/* <!-- Register Form Start --> */}
             <form
-              onSubmit={props.handleSubmit}
               className="needs-validation"
+              onSubmit={props.handleSubmit}
               autoComplete="off"
+              method="post"
+              action="#"
               noValidate
             >
               <div className="form-group">
+                <label for="userName">Your name: </label>
+                <input
+                  onChange={props.handleChange}
+                  type="text"
+                  name="name"
+                  value={props.name}
+                  className="form-control"
+                  placeholder="Ganguly Tech"
+                  id="userName"
+                  required
+                />
+                <div className="valid-feedback">
+                  <i className="far text-success fa-thumbs-up"></i> OK
+                </div>
+                <div className="invalid-feedback">
+                  <i className="fas text-danger fa-exclamation-triangle"></i>{" "}
+                  Some error in your name.
+                </div>
+              </div>
+              <div className="form-group">
                 <label for="userEmail">Email: </label>
                 <input
+                  onChange={props.handleChange}
                   type="email"
                   name="email"
+                  value={props.email}
                   className="form-control"
                   placeholder="abc@abc.com"
                   id="userEmail"
                   aria-describedby="emailHelp"
-                  onChange={props.handleChange}
-                  value={props.email}
                   required
                 />
                 <small id="emailHelp" className="form-text text-muted">
@@ -45,18 +66,18 @@ function LoginView(props) {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="userPassword">Password: </label>
+                <label for="userPassword">Password: </label>
                 <input
+                  onChange={props.handleChange}
                   type="password"
                   className="form-control"
                   placeholder="******"
-                  name="password"
+                  name="password1"
+                  value={props.password1}
                   id="userPassword"
                   aria-describedby="passwordHelp"
                   required
-                  minLength="6"
-                  onChange={props.handleChange}
-                  value={props.password}
+                  minlength="6"
                 />
                 <small id="passwordHelp" className="form-text text-muted">
                   <i className="fas text-primary fa-info"></i> Password must be
@@ -70,22 +91,51 @@ function LoginView(props) {
                   Some error in password.
                 </div>
               </div>
+              <div className="form-group">
+                <label for="userPassword2">Password again: </label>
+                <input
+                  onChange={props.handleChange}
+                  type="password"
+                  className="form-control"
+                  placeholder="******"
+                  name="password2"
+                  value={props.password2}
+                  id="userPassword2"
+                  aria-describedby="passwordHelp2"
+                  required
+                  minlength="6"
+                />
+                <small id="passwordHelp2" className="form-text text-muted">
+                  <i className="fas text-primary fa-info"></i> Password must
+                  match the above.
+                </small>
+                <div className="valid-feedback">
+                  <i className="far text-success fa-thumbs-up"></i> OK
+                </div>
+                <div className="invalid-feedback">
+                  <i className="fas text-danger fa-exclamation-triangle"></i>{" "}
+                  Some error in re-type password.
+                </div>
+              </div>
               <button
                 type="submit"
                 className="btn btn-warning w-100 shadow btn-sm rounded"
               >
-                Sign in
+                Register
               </button>
             </form>
-            {/* <!-- Login Form Ends --> */}
+            {/* <!-- Register Form Ends --> */}
 
             {/* <!-- OR Seperator --> */}
-            <hr className="hr-text" data-content="New to Amazon?" />
+            <hr className="hr-text" data-content="OR" />
 
             {/* <!-- Create account button --> */}
-            <Link to="/register" className="btn btn-dark btn-sm w-100 mt-2">
-              Create your Amazon account
-            </Link>
+            <p className="text-center">
+              Already have an account?{" "}
+              <Link to="/login">
+                Sign in <i className="fas fa-caret-right"></i>
+              </Link>
+            </p>
             <a href="#" className="btn btn-outline-success btn-sm w-100 mt-2">
               <i className="fab fa-google"></i> Sign in with Google
             </a>
@@ -95,9 +145,9 @@ function LoginView(props) {
           </div>
         </div>
       </div>
-      {/* Login Form Card Ends */}
+      {/* <!-- Register Form Card Ends --> */}
     </>
   );
 }
 
-export default LoginView;
+export default RegisterView;

@@ -268,7 +268,7 @@ function NavbarView(props) {
                     Signin
                   </Link>
                   <small>
-                    New customer?<a href="register.html"> Start here.</a>
+                    New customer?<Link to="/register"> Start here.</Link>
                   </small>
                 </div>
               </div>
