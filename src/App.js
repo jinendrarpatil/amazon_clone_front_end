@@ -7,17 +7,22 @@ import Footer from "./components/layout/Footer";
 import RegisterContainer from "./components/Register/RegisterContainer";
 import LoginContainer from "./components/Login/LoginContainer";
 
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <NavbarContainer path="" />
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/login" component={LoginContainer} />
-        <Route exact path="/register" component={RegisterContainer} />
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <Provider>
+      <BrowserRouter store={store}>
+        <div>
+          <NavbarContainer path="" />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={LoginContainer} />
+          <Route exact path="/register" component={RegisterContainer} />
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
