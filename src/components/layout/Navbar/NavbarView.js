@@ -124,12 +124,15 @@ function NavbarView(props) {
                 size="50"
                 name="query"
                 id="query"
+                onClick={props.handleQueryChange}
+                value={props.query}
               />
               <input
                 type="text"
                 name="category"
+                value={props.selectedCat}
                 id="category"
-                value="book"
+                readOnly
                 hidden
               />
               <div className="input-group-append">
