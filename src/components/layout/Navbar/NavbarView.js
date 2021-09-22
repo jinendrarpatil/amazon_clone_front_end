@@ -170,7 +170,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="englishLang"
                       value="english"
-                      checked
+                      defaultChecked
                     />
                     <label
                       className="custom-control-label"
@@ -192,7 +192,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="hindiLang"
                       value="hindi"
-                      checked
+                      defaultChecked
                     />
                     <label className="custom-control-label" htmlFor="hindiLang">
                       <img
@@ -211,7 +211,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="urduLang"
                       value="urdu"
-                      checked
+                      defaultChecked
                     />
                     <label className="custom-control-label" htmlFor="urduLang">
                       <img
@@ -230,7 +230,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="banglaLang"
                       value="bangla"
-                      checked
+                      defaultChecked
                     />
                     <label
                       className="custom-control-label"

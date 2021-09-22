@@ -3,7 +3,7 @@ import {
   REGISTER_ERROR,
   REGISTER_ERROR_CLEAR,
   REGISTER_RESPONSE,
-} from "./types";
+} from "../actions/types";
 
 const initialState = {
   isLoading: false,

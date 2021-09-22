@@ -8,23 +8,23 @@ import RegisterContainer from "./components/Register/RegisterContainer";
 import LoginContainer from "./components/Login/LoginContainer";
 import YourAccountContainer from "./components/YourAccount/YourAccountContainer";
 
-// import { Provider } from "react-redux";
-// import store from "./redux/store";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
-    // <Provider store={store}>
-    <BrowserRouter>
-      <div>
-        <NavbarContainer path="" />
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/login" component={LoginContainer} />
-        <Route exact path="/register" component={RegisterContainer} />
-        <Route exact path="/your_account" component={YourAccountContainer} />
-        <Footer />
-      </div>
-    </BrowserRouter>
-    // </Provider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div>
+          <NavbarContainer path="" />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={LoginContainer} />
+          <Route exact path="/register" component={RegisterContainer} />
+          <Route exact path="/your_account" component={YourAccountContainer} />
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

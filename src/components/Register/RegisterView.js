@@ -16,21 +16,19 @@ function RegisterView(props) {
               className="needs-validation"
               onSubmit={props.handleSubmit}
               autoComplete="off"
-              method="post"
-              action="#"
               noValidate
             >
               <div className="form-group">
-                <label for="userName">Your name: </label>
+                <label htmlFor="userName">Your name: </label>
                 <input
                   onChange={props.handleChange}
                   type="text"
-                  name="name"
-                  value={props.name}
+                  name="username"
+                  placeholder="Username"
+                  value={props.username}
                   className="form-control"
                   placeholder="Ganguly Tech"
                   id="userName"
-                  required
                 />
                 <div className="valid-feedback">
                   <i className="far text-success fa-thumbs-up"></i> OK
@@ -41,7 +39,7 @@ function RegisterView(props) {
                 </div>
               </div>
               <div className="form-group">
-                <label for="userEmail">Email: </label>
+                <label htmlFor="userEmail">Email: </label>
                 <input
                   onChange={props.handleChange}
                   type="email"
@@ -66,18 +64,18 @@ function RegisterView(props) {
                 </div>
               </div>
               <div className="form-group">
-                <label for="userPassword">Password: </label>
+                <label htmlFor="userPassword">Password: </label>
                 <input
                   onChange={props.handleChange}
                   type="password"
                   className="form-control"
                   placeholder="******"
-                  name="password1"
-                  value={props.password1}
+                  name="password"
+                  value={props.password}
                   id="userPassword"
                   aria-describedby="passwordHelp"
                   required
-                  minlength="6"
+                  minLength="6"
                 />
                 <small id="passwordHelp" className="form-text text-muted">
                   <i className="fas text-primary fa-info"></i> Password must be
@@ -92,7 +90,7 @@ function RegisterView(props) {
                 </div>
               </div>
               <div className="form-group">
-                <label for="userPassword2">Password again: </label>
+                <label htmlFor="userPassword2">Password again: </label>
                 <input
                   onChange={props.handleChange}
                   type="password"
@@ -103,7 +101,7 @@ function RegisterView(props) {
                   id="userPassword2"
                   aria-describedby="passwordHelp2"
                   required
-                  minlength="6"
+                  minLength="6"
                 />
                 <small id="passwordHelp2" className="form-text text-muted">
                   <i className="fas text-primary fa-info"></i> Password must

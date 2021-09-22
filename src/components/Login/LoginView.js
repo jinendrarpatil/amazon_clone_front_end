@@ -20,7 +20,7 @@ function LoginView(props) {
               noValidate
             >
               <div className="form-group">
-                <label for="userEmail">Email: </label>
+                <label htmlFor="userEmail">Email: </label>
                 <input
                   type="email"
                   name="email"

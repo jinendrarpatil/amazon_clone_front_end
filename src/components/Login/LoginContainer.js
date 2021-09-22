@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import LoginView from "./LoginView";
+import { loginRequest } from "./../../redux/actions/loginActions";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
-export default class LoginContainer extends Component {
+class LoginContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,3 +35,16 @@ export default class LoginContainer extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    login: state.login,
+  };
+};
+
+const mapDispatchToProps = { loginRequest };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(LoginContainer));
