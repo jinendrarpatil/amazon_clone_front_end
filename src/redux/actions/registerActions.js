@@ -18,14 +18,13 @@ export const registerRequest = (user, history) => (dispatch) => {
   axios
     .post("http://localhost:5000/api/user/register", user)
     .then((res) => {
-      dispatch(registerResponse());
-      console.log(res);
+      //redirect user to login page
+      history.push("/login");
     })
     .catch((err) => {
-      dispatch(registerResponse());
-      dispatch(registerError());
-      console.log(err);
+      dispatch(registerError(err.response.data.errors));
     });
+  dispatch(registerResponse());
 };
 
 export const registerError = (payload) => {

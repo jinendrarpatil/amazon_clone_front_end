@@ -28,7 +28,7 @@ class RegisterContainer extends Component {
 
     const user = {
       username: this.state.username,
-      password1: this.state.password,
+      password: this.state.password,
       password2: this.state.password2,
       email: this.state.email,
     };

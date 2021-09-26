@@ -22,7 +22,11 @@ class LoginContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    const user = {
+      email: this.state.email,
+      password: this.state.password,
+    };
+    this.props.loginRequest(user, this.props.history);
   };
 
   render() {

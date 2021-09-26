@@ -19,10 +19,10 @@ const loginReducer = (state = initialState, action) => {
       return { ...state, isLoading: true };
 
     case LOGIN_ERROR:
-      return { ...state, isLoading: false, errors: action.payload };
+      return { ...state, isLoading: false, errors: action.payload, user: {} };
 
     case LOGIN_ERROR_CLEAR:
-      return { ...state, isLoading: false, errors: {} };
+      return { ...state, isLoading: false, errors: {}, user: {} };
 
     case LOGIN_RESPONSE:
       return { ...state, isLoading: false };
